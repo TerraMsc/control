@@ -10,6 +10,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -18,36 +22,49 @@
 
 <body>
 
-  <div id="animation-container">
-    <div id="move">
-      <input name="" type="button" onclick="ani()" value="" class="main">
-    </div>
+<div id="wrapper-all">
+
+  <div id="wrapper">
+      <div id="animation-container">
+        <div id="move">
+          <input name="" type="button" onclick="ani()" value="" class="main">
+        </div>
+      </div>
   </div>
 
-<!--
-<script>
-  function ani() {
-    document.getElementById('highlight').classList.add('highlight-animation');
-  }
-</script>
--->
+  <div id="wrapper-2">
+    <div id="border"></div>
+  </div>
 
-<script>
-  $(document).ready(function() {
+  <div id="wrapper-3">
+    <div id="bulb"></div>
+    <div id="power-indicator">power indicator</div>
+    <div id="border-outer"></div>
+    <div id="on">on</div>
+    <div id="bulb-transparent"></div>
+  </div>
+
+</div>
+
+  <script>
+    $(document).ready(function() {
       var clicked = false;
 
       $('#move').click(function() {
-          if(clicked) {
-              clicked = false;
-              $(this).removeClass('move-on').addClass('move-off');
-          }
-          else {
-              clicked = true;
-              $(this).removeClass('move-off').addClass('move-on');
-          }
-       });
-  });
-</script>
+        if (clicked) {
+          clicked = false;
+          $(this).removeClass('move-on').addClass('move-off');
+          $('#border').removeClass('border-animation-on').addClass('border-animation-off');
+          $('#animation-container').removeClass('animation-container-on').addClass('animation-container-off');
+        } else {
+          clicked = true;
+          $(this).removeClass('move-off').addClass('move-on');
+          $('#border').removeClass('border-animation-off').addClass('border-animation-on');
+          $('#animation-container').removeClass('animation-container-off').addClass('animation-container-on');
+        }
+      });
+    });
+  </script>
 
 </body>
 
