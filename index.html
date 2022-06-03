@@ -1,1 +1,54 @@
-<input type="button" class="main" value="nya">
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>ctrl</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+
+  <link rel="stylesheet" href="index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="animation-container">
+    <div id="move">
+      <input name="" type="button" onclick="ani()" value="" class="main">
+    </div>
+  </div>
+
+<!--
+<script>
+  function ani() {
+    document.getElementById('highlight').classList.add('highlight-animation');
+  }
+</script>
+-->
+
+<script>
+  $(document).ready(function() {
+      var clicked = false;
+
+      $('#move').click(function() {
+          if(clicked) {
+              clicked = false;
+              $(this).removeClass('move-on').addClass('move-off');
+          }
+          else {
+              clicked = true;
+              $(this).removeClass('move-off').addClass('move-on');
+          }
+       });
+  });
+</script>
+
+</body>
+
+</html>

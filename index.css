@@ -1,0 +1,59 @@
+body {
+  background-color: #01421c;
+}
+
+.main {
+  position: absolute;
+  border: none;
+  outline: none;
+  height: 489px;
+  width: 316px;
+  border-radius: 80px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 0;
+}
+
+#animation-container {
+  position: relative;
+  border: none;
+  outline: none;
+  height: 489px;
+  width: 316px;
+  border-radius: 80px;
+  background-color: #a34ea0;
+}
+
+#move {
+  position: absolute;
+  height: 380px;
+  width: 316px;
+  border-radius: 80px;
+  background-color: #b75db0;
+}
+
+.move-on {
+  animation-name: on;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.move-off {
+  animation-name: off;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes on {
+  0% {margin-top: 0px; height: 380px;}
+  50% {margin-top: 54px; height: 420px;}
+  100% {margin-top: 109px; height: 380px;}
+}
+
+@keyframes off {
+  0% {margin-top: 109px;}
+  50% {margin-top: 54px; height: 420px;}
+  100% {margin-top: 0px;}
+}
