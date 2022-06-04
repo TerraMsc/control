@@ -56,11 +56,21 @@
           $(this).removeClass('move-on').addClass('move-off');
           $('#border').removeClass('border-animation-on').addClass('border-animation-off');
           $('#animation-container').removeClass('animation-container-on').addClass('animation-container-off');
+          $('#border-outer').removeClass('border-outer-on').addClass('border-outer-off');
+          $('#bulb').removeClass('bulb-on').addClass('bulb-off');
+          $('#on').removeClass('on-on').addClass('on-off');
+          $('#power-indicator').removeClass('power-indicator-on').addClass('power-indicator-off');
+          $('body').removeClass('body-on').addClass('body-off');
         } else {
           clicked = true;
           $(this).removeClass('move-off').addClass('move-on');
           $('#border').removeClass('border-animation-off').addClass('border-animation-on');
           $('#animation-container').removeClass('animation-container-off').addClass('animation-container-on');
+          $('#border-outer').removeClass('border-outer-off').addClass('border-outer-on');
+          $('#bulb').removeClass('bulb-off').addClass('bulb-on');
+          $('#on').removeClass('on-off').addClass('on-on');
+          $('#power-indicator').removeClass('power-indicator-off').addClass('power-indicator-on');
+          $('body').removeClass('body-off').addClass('body-on');
         }
       });
     });
