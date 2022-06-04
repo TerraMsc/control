@@ -8,7 +8,7 @@
 
   <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,9 @@
 
   <div id="wrapper">
       <div id="animation-container">
+        <input name="" type="button" onclick="ani()" value="" class="main">
         <div id="move">
-          <input name="" type="button" onclick="ani()" value="" class="main">
+
         </div>
       </div>
   </div>
@@ -50,10 +51,10 @@
     $(document).ready(function() {
       var clicked = false;
 
-      $('#move').click(function() {
+      $('#animation-container').click(function() {
         if (clicked) {
           clicked = false;
-          $(this).removeClass('move-on').addClass('move-off');
+          $('#move').removeClass('move-on').addClass('move-off');
           $('#border').removeClass('border-animation-on').addClass('border-animation-off');
           $('#animation-container').removeClass('animation-container-on').addClass('animation-container-off');
           $('#border-outer').removeClass('border-outer-on').addClass('border-outer-off');
@@ -63,7 +64,7 @@
           $('body').removeClass('body-on').addClass('body-off');
         } else {
           clicked = true;
-          $(this).removeClass('move-off').addClass('move-on');
+          $('#move').removeClass('move-off').addClass('move-on');
           $('#border').removeClass('border-animation-off').addClass('border-animation-on');
           $('#animation-container').removeClass('animation-container-off').addClass('animation-container-on');
           $('#border-outer').removeClass('border-outer-off').addClass('border-outer-on');
