@@ -6,24 +6,32 @@
 
   <title>ctrl</title>
 
+  <!-- META + MOBILE -->
   <link rel="apple-touch-startup-image" href="https://i.imgur.com/C42Ziyc.png">
-
-  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1f2041">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+  <link rel="manifest" href="manifest.json">
 
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="index.css?v=1">
-  <meta name="theme-color" content="#1c6e3e">
 
+  <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
 
 </head>
 
 <body>
+
+<div id="signature">miangie + terio</div>
 
 <div id="wrapper-all">
 
@@ -32,7 +40,11 @@
         <form action="/wake" method="post">
           <input name="" type="button" onclick="wol()" value="" class="main">
         </form>
-        <div id="move"></div>
+        <div id="move">
+          <img class="on-1" src="https://i.imgur.com/yOEFqwd.jpg">
+          <img class="on-2" src="https://i.imgur.com/Gghv9pH.jpg">
+          <img class="on-3" src="https://i.imgur.com/8kuszBk.jpg">
+        </div>
       </div>
   </div>
 
@@ -41,45 +53,20 @@
   </div>
 
   <div id="wrapper-3">
-    <div id="bulb"></div>
-    <div id="power-indicator">power indicator</div>
     <div id="border-outer"></div>
-    <div id="on">on</div>
-    <div id="bulb-transparent"></div>
+  </div>
+
+  <div id="wrapper-4">
+    <div id="flash"></div>
+  </div>
+
+  <div id="wrapper-5">
+    <div id="flash-2"></div>
   </div>
 
 </div>
 
-  <script>
-    $(document).ready(function() {
-      var clicked = false;
-
-      $('#animation-container').click(function() {
-        if (clicked) {
-          clicked = false;
-          $('#move').removeClass('move-on').addClass('move-off');
-          $('#border').removeClass('border-animation-on').addClass('border-animation-off');
-          $('#animation-container').removeClass('animation-container-on').addClass('animation-container-off');
-          $('#border-outer').removeClass('border-outer-on').addClass('border-outer-off');
-          $('#bulb').removeClass('bulb-on').addClass('bulb-off');
-          $('#on').removeClass('on-on').addClass('on-off');
-          $('#power-indicator').removeClass('power-indicator-on').addClass('power-indicator-off');
-          $('body').removeClass('body-on').addClass('body-off');
-        } else {
-          clicked = true;
-          $('#move').removeClass('move-off').addClass('move-on');
-          $('#border').removeClass('border-animation-off').addClass('border-animation-on');
-          $('#animation-container').removeClass('animation-container-off').addClass('animation-container-on');
-          $('#border-outer').removeClass('border-outer-off').addClass('border-outer-on');
-          $('#bulb').removeClass('bulb-off').addClass('bulb-on');
-          $('#on').removeClass('on-off').addClass('on-on');
-          $('#power-indicator').removeClass('power-indicator-off').addClass('power-indicator-on');
-          $('body').removeClass('body-off').addClass('body-on');
-        }
-      });
-    });
-  </script>
-
+  <!-- SCRIPTS -->
   <script>
     function wol() {
       var xhttp = new XMLHttpRequest();
@@ -87,6 +74,8 @@
       xhttp.send()
     }
   </script>
+
+  <script src="animate.js"></script>
 
 </body>
 
