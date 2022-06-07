@@ -80,6 +80,7 @@ form {
   height: 100%;
   position: fixed;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 #flash-2 {
@@ -89,6 +90,7 @@ form {
   height: 200px;
   border-radius: 100%;
   opacity: 0.2;
+  flex-shrink: 0;
 }
 
 #border-outer {
@@ -104,6 +106,7 @@ form {
   width: 323px;
   height: 323px;
   border-radius: 100%;
+  flex-shrink: 0;
 }
 
 #signature {

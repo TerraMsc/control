@@ -11,7 +11,7 @@ $('.main').on('click', function(event) {
     tl.fromTo('.on-3', {opacity: (0), scale: (0.9)}, {opacity: 1, scale: (1.05), delay: (0.5)}, '<0%')
     tl.to('#border', {scale: (1.04), backgroundColor: "#342f59"}, '<')
     tl.to('#flash', {width: 500, height: 500, opacity: 0,}, '<')
-    tl.to('#flash-2', {width: 900, height: 900, opacity: 0, timeScale: (0.1)}, '<20%')
+    tl.to('#flash-2', {width: 700, height: 700, opacity: 0}, '<20%')
 
     // animation end //
     tl.to('.on-3', {scale: (1), delay: 1})
